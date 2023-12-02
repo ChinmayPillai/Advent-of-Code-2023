@@ -1,4 +1,4 @@
-file_path = "1_1input.txt"
+file_path = "1.txt"
 
 digits = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
 
