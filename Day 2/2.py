@@ -1,51 +1,59 @@
 day = 2
 file_path = "Day " + str(day) + "/" + str(day) + ".txt"
 test_path = "Day " + str(day) + "/test.txt"
-ans = 0
 
-sum = 0
 
-max = {
-    "red": 0,
-    "green": 0,
-    "blue": 0
+max1 = {
+    "red": 12,
+    "green": 13,
+    "blue": 14
 }
 
-with open(file_path, 'r') as file:
-    lines = file.readlines()
+max = {
+    "red": 12,
+    "green": 13,
+    "blue": 14
+}
 
-    for line in lines:
-        max["red"] = 0
-        max["green"] = 0
-        max["blue"] = 0
+for path in [test_path, file_path]:
+
+    with open(path, 'r') as file:
+        ans = 0
+        sum1 = 0
+        sum2 = 0
+        lines = file.readlines()
+
+        for line in lines:
+            max["red"] = 0
+            max["green"] = 0
+            max["blue"] = 0
 
 
-        game_info, rolls_info = line.split(':')
-        game_id = int(game_info.split()[1])
-        #sum += game_id
-        
-        rolls = rolls_info.strip().split(';')
+            game_info, rolls_info = line.split(':')
+            game_id = int(game_info.split()[1])
+            sum1 += game_id
+            
+            rolls = rolls_info.strip().split(';')
 
-
-        for roll in rolls:
 
             flag = False
-            for item in roll.split(','):
-                count, colour = item.strip().split()
-                if int(count) > max[colour]:
-                    max[colour] = int(count)
-                    #flag = True
-                    #ans += game_id
-                    #break
+
+            for roll in rolls:
+
+                for item in roll.split(','):
+                    count, colour = item.strip().split()
+                    if int(count) > max[colour]:
+                        max[colour] = int(count)
+                        
+                    
+                    if not flag and int(count) > max1[colour]:
+                        flag = True
+                        ans += game_id
+                
             
-            #if flag:
-            #    break
-        
-        sum += max["red"] * max["green"] * max["blue"]
+            sum2 += max["red"] * max["green"] * max["blue"]
 
 
 
-
-print(sum)
-
-#print(sum-ans)
+    print("="*80)
+    print(sum1-ans, sum2)

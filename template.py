@@ -1,16 +1,21 @@
-day = 2
+day = 3
 file_path = "Day " + str(day) + "/" + str(day) + ".txt"
 test_path = "Day " + str(day) + "/test.txt"
 
 
-ans = 0
+for path in [test_path, file_path]:
+    
+    ans = 0
+    sum = 0
 
-with open(file_path, 'r') as file:
-    lines = file.readlines()
+    with open(path, 'r') as file:
+        lines = file.readlines()
 
-    for line in lines:
-        for ch in line:
-            ans = 0
+        for line in lines:
+            for ch in line:
+                pass
 
-
-print(ans)
+    
+    print("="*80)
+    print(ans)
+print("="*80)
