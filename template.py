@@ -12,7 +12,7 @@ for path in [test_path, file_path]:
         lines = file.readlines()
 
         for line in lines:
-                pass
+            pass
 
     
     print("="*80)
