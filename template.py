@@ -11,7 +11,7 @@ for path in [test_path, file_path]:
     with open(path, 'r') as file:
         lines = file.readlines()
 
-        for line in lines:
+        for i, line in enumerate(lines):
             pass
 
     
