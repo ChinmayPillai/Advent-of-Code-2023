@@ -6,7 +6,6 @@ test_path = "Day " + str(day) + "/test.txt"
 for path in [test_path, file_path]:
     
     ans = 0
-    sum = 0
 
     with open(path, 'r') as file:
         lines = file.readlines()
