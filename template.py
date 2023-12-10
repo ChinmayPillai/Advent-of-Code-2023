@@ -10,8 +10,8 @@ for path in [test_path, file_path]:
     with open(path, 'r') as file:
         lines = file.readlines()
 
-        for i, line in enumerate(lines):
-            pass
+    for i, line in enumerate(lines):
+        pass
 
     
     print("="*80)
