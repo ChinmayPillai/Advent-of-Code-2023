@@ -1,4 +1,4 @@
-day = 3
+day = 11
 file_path = "Day " + str(day) + "/" + str(day) + ".txt"
 test_path = "Day " + str(day) + "/test.txt"
 
