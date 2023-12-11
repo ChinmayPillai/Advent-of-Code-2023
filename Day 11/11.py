@@ -19,8 +19,6 @@ for path in [test_path, file_path]:
     with open(path, 'r') as file:
         lines = [list(line.strip()) for line in file.read().split('\n')]
 
-    p = len(lines)
-
     empty_rows = []
     empty_columns = []
     galaxies = []
@@ -34,6 +32,7 @@ for path in [test_path, file_path]:
         if not flag:
             empty_rows.append(i)
 
+
     for j in range(len(lines[0])):
         flag = False
         for i in range(len(lines)):
@@ -43,10 +42,12 @@ for path in [test_path, file_path]:
         if not flag:
             empty_columns.append(j)
 
+
     for i, line in enumerate(lines):
         for j, k in enumerate(line):
             if k == '#':
                 galaxies.append((i, j))
+
 
     for part2 in [False, True]:
         ans = 0
