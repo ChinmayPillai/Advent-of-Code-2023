@@ -8,7 +8,7 @@ for path in [test_path, file_path]:
     ans = 0
 
     with open(path, 'r') as file:
-        lines = file.readlines()
+        lines = [line.strip() for line in file.read().split('\n')]
 
     for i, line in enumerate(lines):
         pass
