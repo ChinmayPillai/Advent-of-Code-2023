@@ -3,15 +3,13 @@ file_path = "Day " + str(day) + "/" + str(day) + ".txt"
 test_path = "Day " + str(day) + "/test.txt"
 
 
-Box = [[] for i in range(256)]
-
 def hash(s):
     value = 0
     for char in s:
         value = ( (value + ord(char)) * 17) % 256
     return value
 
-def hashmap(line):
+def hashmap(Box, line):
     if line[-1] == '-':
         box = hash(line[:-1])
         reqBox = None
@@ -54,7 +52,7 @@ for path in [test_path, file_path]:
 
     for line in lines:
         ans1 += hash(line)
-        hashmap(line)
+        hashmap(Box, line)
 
     ans2 = 0
     
