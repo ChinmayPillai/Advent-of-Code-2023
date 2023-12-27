@@ -69,7 +69,7 @@ def findD(r,c):
     if abs(tr)>2 or abs(tc)>2:
       continue
     D[(tr,tc,r,c)] = d
-    for dr,dc in [[-1,0],[0,1],[1,0],[0,-1]]:
+    for dr,dc in direc:
       Q.append((tr,tc,r+dr, c+dc, d+1))
   return D
 
