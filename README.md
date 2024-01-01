@@ -11,6 +11,6 @@ My solutions for Advent of code 2023
 ## Overview
 Great problems and filled with lots of learnings.
 
-The problems started with easy logic based questions for the first few days, then went onto **Graph + Memoization** based questions. Following this we had few **Dynamic Programming** based questions and one **Dijkstra's Algorithm** implementation. As we approached the last week, we got back to **Graph** based and few **logic and math** heavy questions. At last we ended with a **Cut Set** based question.
+The problems started with straightforward logic-based questions for the first few days and then went onto **Graph + Memoization** based problems. Following this, we had several **Dynamic Programming** based questions and one **Dijkstra's Algorithm** implementation. As we approached the last week, we returned to **Graph** based and a few **logic and math** heavy questions. At last, we ended with a **Cut Set** based problem.
 
-It was a great experience for me and I would recommend everyone interested in programming to participate next year. Looking forward to Advent of Code 2024.
+It was an excellent experience for me, and I recommend everyone interested in programming to participate next year. Looking forward to Advent of Code 2024.
